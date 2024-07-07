@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: movie-booking-backend
+    env: node
+    plan: free
+    buildCommand: 'npm install'
+    startCommand: 'npm start'
+    envVars:
+      - key: MONGO_URI
+        value: <mongodb://localhost:27017/moviebooking>
+      - key: JWT_SECRET
+        value: <9be7eea4e1a095197e5985617a842ca149a92071ce138f47bf2920f25ce421ca166b13fd6871eefcc8ea9cea51470ea25f28d6460399f2e86ba7922a06234c0a>
